@@ -1,0 +1,36 @@
+#include<iostream> 
+ using namespace std ; 
+  int main () 
+  { 
+       long int  num[5],sum[5]={ 0,0,0,0,0} ,max=0, min; 
+       int i,j; 
+       for ( i = 0; i < 5; i++) 
+       { 
+           cin>>num[i]; 
+       } 
+       for ( i = 0; i < 5; i++) 
+       { 
+           for ( j = 0; j < 5; j++) 
+           { 
+               if ( i!= j ) 
+               { 
+                   sum[i]=sum[i]+ num[j]; 
+               } 
+               } 
+           if ( sum[i]>= max ) 
+           { 
+               max=sum[i]; 
+           } 
+         
+       } 
+         min=max; 
+       for ( i = 0; i < 5; i++) 
+       { 
+             
+           if ( sum[i]<= min ) 
+           { 
+               min=sum[i]; 
+           } 
+       } 
+        
+       cout<<min<<" "<<max; 
